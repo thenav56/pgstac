@@ -124,8 +124,7 @@ def read_json(file: Union[Path, str, Iterator[Any]] = "stdin") -> Iterable:
             # Try reading line by line as ndjson
             try:
                 for line in f:
-                    lineout = line.strip().replace("\\\\", "\\").replace("\\\\", "\\")
-                    yield orjson.loads(lineout)
+                    yield orjson.loads(line)
             except JSONDecodeError:
                 # If reading first line as json fails, try reading entire file
                 logger.info("First line could not be parsed as json, trying full file.")
