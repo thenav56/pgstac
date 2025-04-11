@@ -1,6 +1,6 @@
 [project]
 name = "pypgstac"
-version = "0.9.5"
+version = "0.9.6"
 description = "Schema, functions and a python library for storing and accessing STAC collections and items in PostgreSQL"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -19,7 +19,7 @@ classifiers = [
 ]
 dependencies = [
     "cachetools>=5.3.0",
-    "fire>=0.4.0",
+    "fire>=0.7.0",
     "hydraters>=0.1.0",
     "orjson>=3.7.0",
     "plpygis>=0.5.0",
